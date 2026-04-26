@@ -1,0 +1,250 @@
+/* ==========================================
+   LOGIN PAGE CSS - src/pages/Login.css
+   ========================================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* LEFT BANNER */
+.login-banner {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.login-banner .banner-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.banner-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 60px;
+}
+
+.banner-overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.banner-overlay > p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 40px;
+}
+
+.banner-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.banner-features div {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* RIGHT FORM */
+.login-form-wrap {
+  flex: 0 0 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 40px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  margin-bottom: 28px;
+}
+
+.login-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Error */
+.error-msg {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+  color: #c0392b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 16px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  border-color: var(--blue2);
+}
+
+.forgot-link {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: var(--blue2);
+  margin-top: 6px;
+}
+
+/* Buttons */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 16px;
+}
+
+.btn-login:hover { background: var(--blue2); }
+
+.divider {
+  text-align: center;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.divider span {
+  position: relative;
+  background: white;
+  padding: 0 12px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  background: white;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #444;
+  transition: border-color 0.2s;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.btn-google:hover { border-color: #4285f4; }
+
+.signup-prompt {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.signup-prompt a {
+  color: var(--blue2);
+  font-weight: 700;
+}
+
+/* Quick Browse */
+.quick-browse {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.quick-browse p {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.browse-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.browse-links a {
+  padding: 5px 12px;
+  background: #f4f6f9;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.browse-links a:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-banner { display: none; }
+  .login-form-wrap { flex: 1; }
+}
+
+@media (max-width: 500px) {
+  .login-form-wrap { padding: 24px 20px; }
+}

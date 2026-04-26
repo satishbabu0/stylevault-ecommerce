@@ -1,0 +1,238 @@
+/* ==========================================
+   HEADER CSS - src/components/Header.css
+   ========================================== */
+
+/* TOP BAR */
+.header-top {
+  background: var(--primary);
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 0;
+}
+
+.header-top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-top-links a {
+  color: #ccc;
+  font-size: 12px;
+  transition: color 0.2s;
+}
+.header-top-links a:hover { color: var(--accent2); }
+
+/* MAIN HEADER */
+.header-main {
+  background: var(--blue2);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.header-main-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 11px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.search-btn {
+  padding: 11px 18px;
+  background: var(--accent2);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-btn:hover {
+  background: #e0b030;
+}
+
+/* ICONS */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  position: relative;
+  font-size: 12px;
+  gap: 2px;
+  transition: opacity 0.2s;
+}
+
+.icon-btn:hover { opacity: 0.8; }
+
+.icon { font-size: 22px; }
+
+.icon-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.85);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 4px 8px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--primary);
+  padding: 0;
+  overflow-x: auto;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.nav-link {
+  padding: 12px 16px;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--accent2);
+  background: rgba(255,255,255,0.05);
+  border-bottom-color: var(--accent2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .header-top { display: none; }
+
+  .logo-brand { font-size: 18px; }
+  .logo-sub { display: none; }
+  .logo-icon { font-size: 26px; }
+
+  .search-bar input { font-size: 13px; }
+  .icon-label { display: none; }
+  .icon { font-size: 20px; }
+
+  .menu-toggle { display: block; }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+  }
+  .navbar.open { display: block; }
+  .navbar-inner { flex-direction: column; align-items: flex-start; }
+  .nav-link { width: 100%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+}
+
+@media (max-width: 600px) {
+  .header-main-inner { gap: 10px; }
+  .logo { min-width: 120px; }
+}
+
+/* FitRoom special nav highlight */
+.fitroom-nav {
+  color: #f0c14b !important;
+  font-weight: 700 !important;
+}
+.fitroom-nav:hover {
+  color: #f0c14b !important;
+  border-bottom-color: #f0c14b !important;
+  background: rgba(240,193,75,0.08) !important;
+}
+
